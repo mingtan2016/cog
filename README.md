@@ -51,8 +51,9 @@ Since the values of features are in different scale, I did a simple feature norm
 newvalue = (oldvalue-minvalue)/(maxvalue-minvalue)
 <br>
 where maxvalue and minvalue is the maxminum and mininum of each column (feature)
-
+<br>
 The command is:
+<br>
 python NormalizeData.py original_output_train_feature_file original_output_validation_feature_file normalized_output_train_feature_file normalized_output_validation_feature_file
 
 <br>
@@ -67,6 +68,7 @@ normalized_output_validation_feature_file: The normalized dev features.
 
 
 3) Train the model
+<br>
 python TrainClassifierModel.py normalized_train_feature_file  output_classifier_model  output_regression_model  feature_size
 <br>
 normalized_train_feature_file: from Step 2
@@ -80,6 +82,7 @@ feature_size: the total size of the features generated from Step 1.
 
 
 4) Generate Test Model
+<br>
 python ~/workspace/cognitive/TestModel.py  classifier_model regression_model feature_size normalized_output_validation_feature_file  submission_file
 
 <br>
