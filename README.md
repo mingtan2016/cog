@@ -1,4 +1,4 @@
-Training Process:
+Training and Testing Process
 ==================
 
 Generally, I build two models to solve this prediction problem. One is binary classification, which is used to determined whether there is a response. If it labels the testing data as 0, the PREDICT_D value is set to 0. If the testing data is labeled as 1, another model for regression is used to predict the PREDICT_D. 
