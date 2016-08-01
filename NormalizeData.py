@@ -8,7 +8,9 @@ import sys
 minvaluemap = dict()
 maxvaluemap = dict()
 
-
+'''
+	compute the min and max value for every column (features). 
+'''
 def MinMaxValues(oriTrainData):
 
     fi = open(oriTrainData, 'r')
@@ -34,6 +36,9 @@ def MinMaxValues(oriTrainData):
         ind += 1
     fi.close()
 
+'''
+	rescale the feature values by (feature-min)/(max-min)
+'''
 def Normalize(oriData, newData):
     fi = open(oriData, 'r')
     fo = open(newData,'w')

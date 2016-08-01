@@ -13,7 +13,9 @@ class FeatureProcesser:
         self.datafile = datafile
         self.orifeaturelist = orifeaturelist
         self.newfeaturelist = newfeaturelist
-
+    '''
+	Go through the training data, and generate the feature vocabulary list
+    '''
     def GetFeatureVocabs(self):
         self.ReadOriFeatureList()
         self.dataHandler = DataHandler(self.datafile)
@@ -85,7 +87,9 @@ class FeatureProcesser:
         for ll in featVocabs_sortd:
             fo.write(str(ll[0])+'\t'+str(ll[1])+'\n')
         fo.close()
-                                           
+    '''
+	Generate feature vectors according to feature vocabularies for each dataset.
+    '''
     def GetFeatureFile(self, infile, outfile):
         self.dataHandler = DataHandler(infile)
         fo = open(outfile, 'w')        
@@ -157,7 +161,9 @@ class FeatureProcesser:
             fo.write('\n')
             fo.flush()
         fo.close()
-            
+    '''
+	Read a list of original input variables, in order to get their type: Date, Num and Char. I added Date manually for special take-care of Date variables. 
+    '''    
     def ReadOriFeatureList(self):
         fi = open(self.orifeaturelist, 'r')
         

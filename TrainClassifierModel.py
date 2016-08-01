@@ -7,19 +7,10 @@ class ClassifierModel:
         self.omodelclassifier = omodelclassifier
         self.omodelreg = omodelreg
         self.feature_size = feature_size
+
+
+
     def train_classifier(self, trainfile):
-#         fi = open(trainfile, 'r')
-#         max_fidx = -1
-#         for line in fi:
-#             line = line.strip()
-#             (targetb, targetd, featurestr) = line.split('\t')
-#             featpairs = featurestr.split()
-#             for feat in featpairs:
-#                 (fidx, _) = feat.split(':')
-#                 if( max_fidx < int(fidx)):
-#                     max_fidx = int(fidx)
-#         fi.close()
-#         feature_size = max_fidx + 1
         print 'Feature Size', self.feature_size
         
         fi = open(trainfile, 'r')
@@ -39,13 +30,13 @@ class ClassifierModel:
         '''
         Training start
         '''
-        class_weights = {0:0.1, 1:0.9}
+        class_weights = {0:0.1, 1:0.9} #for unbalanced data, label-0 is much more than label-1. 
         clf = svm.LinearSVC(class_weight=class_weights)
         clf.fit(X, Y)
         '''
         Training End
         '''
-        print 'Training End'
+        print 'Classifier Training End'
         pickle.dump(clf, open(self.omodelclassifier, 'wb'))
         self.clf = clf
 
@@ -91,10 +82,15 @@ class ClassifierModel:
         self.reg = pickle.load(pkl_file)
         pkl_file.close()
     
+    '''
+	inference function for binary classification
+    ''' 
     def classify(self, X):    
         ytest = self.clf.predict(X)
         return ytest
-       
+    '''
+	inference function for regression. 
+    '''
     def predict(self, X):
         ytest = self.reg.predict(X)
         return ytest         

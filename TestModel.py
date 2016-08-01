@@ -41,6 +41,9 @@ def prediction(cm, feature_size, testdata, outputfile):
     print "final total revenue:", sumrev
     
 if __name__ == '__main__':
+    if(len(sys.argv)!=6):
+	print 'usage: classifier_model_location, regression_model_location, feature_vector_size, test_feature_file, output_submission_file'
+	sys.exit()
     clf_model = sys.argv[1]
     reg_model = sys.argv[2]
     feature_size = int(sys.argv[3])
