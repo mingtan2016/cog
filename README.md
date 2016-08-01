@@ -23,7 +23,9 @@ The command is:
 
 python FeatureProcessor.py  original_train_file original_validation_file, feature_type_list_file, output_feature_vocab_list_file, output_train_feature_file, output_validation_feature_file
 
+
 original_train_file:                    cup98LRN.txt
+<br>
 original_validation_file:               cup98VAL.txt
 feature_type_list_file :                It is manually transfered from feature_types.txt. 
 For example: 	                        ODATEDW  Date = manually change Char to Date
