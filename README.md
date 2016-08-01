@@ -55,11 +55,15 @@ where maxvalue and minvalue is the maxminum and mininum of each column (feature)
 The command is:
 python NormalizeData.py original_output_train_feature_file original_output_validation_feature_file normalized_output_train_feature_file normalized_output_validation_feature_file
 
+<br>
 original_output_train_feature_file: output_train_feature_file from Step 1
+<br>
 original_output_validation_feature_file:  output_validation_feature_file from Step 1
+<br>
 normalized_output_train_feature_file: The normalized train features. 
+<br>
 normalized_output_validation_feature_file: The normalized dev features.
-
+<br>
 
 
 3) Train the model
