@@ -65,8 +65,8 @@ if __name__ == '__main__':
     newDevData = sys.argv[4]
     
     MinMaxValues(oriTrainData)
-    print 'MinMax'
+    print 'MinMax Value Computation Finished.'
     Normalize(oriTrainData, newTrainData)
-    print 'Noramal train'
+    print 'Normalized train set finished.'
     Normalize(oriDevData, newDevData)
-    print 'Noramal dev'
+    print 'Noramal validation set finished.'
