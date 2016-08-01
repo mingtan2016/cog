@@ -19,7 +19,7 @@ Since there are many categorical variables, I used one-hot vectors to represent 
 There is only one single feature for numerical valuables.
 
 There are several special cases. 
-a) ZIP: Although ZIP is a categorical variable, there are too many different values. Considering reducing the memory usage, I did not use this variable. b) MDMAUD: four bytes respectively have their own meanings. So for each byte, I regard it as independent categorical variable. c) DOMAIN: two bytes respectively have their own meanings. So for each byte, I regard it as independent categorical variable. d) All DATE vaiables: The last two digit 'mm' is month, the final value is yy + mm/12
+a) ZIP: Although ZIP is a categorical variable, there are too many different values. Considering reducing the memory usage, I did not use this variable. b) MDMAUD: four bytes respectively have their own meanings. So for each byte, I regard it as independent categorical variable. c) DOMAIN: two bytes respectively have their own meanings. So for each byte, I regard it as independent categorical variable. d) All DATE vaiables: The last two digits 'mm' are month, so I compute the final value of dates as yy + mm/12
 
 The command is:
 
