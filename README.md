@@ -11,6 +11,7 @@ The code is built on PYTHON, using the Scikit-Learn package. The classifier is b
 There are following steps to complete the training and testing. 
 
 1) Feature creation. 
+
 Since there are many categorical variables, I used one-hot vectors to represent those categorical features. For example, each different value X in the input variable A, there is a binary feature call 'A_X'. There is an additional feature named 'A_Empty' in case there is no value for the input variable A. 
 
 There is only one single feature for numerical valuables.
@@ -24,11 +25,11 @@ d) All DATE vaiables: The last two digit 'mm' is month, the final value is yy + 
 
 The command is:
 
-python FeatureProcessor.py  <original_train_file>, <original_validation_file>, <feature_type_list_file>, <output_feature_vocab_list_file>, <output_train_feature_file>, <output_validation_feature_file>
+python FeatureProcessor.py  original_train_file original_validation_file, feature_type_list_file, output_feature_vocab_list_file, output_train_feature_file, output_validation_feature_file
 
-<original_train_file>:			cup98LRN.txt
-<original_validation_file>:		cup98VAL.txt
-<feature_type_list_file>:		It is manually transfered from feature_types.txt. 
+original_train_file:			cup98LRN.txt
+original_validation_file:		cup98VAL.txt
+feature_type_list_file :		It is manually transfered from feature_types.txt. 
 					For example: 	ODATEDW     Date => manually change Char to Date
 							OSOURCE     Char
 							TCODE       Num
