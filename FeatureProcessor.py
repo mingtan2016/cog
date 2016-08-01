@@ -134,22 +134,12 @@ class FeatureProcesser:
                         ofeatures[self.featVocabs[self.dataHandler.featidx2name[idx]] ] += float(vv)
 
                 elif(self.mapOriFeatureType[ self.dataHandler.featidx2name[idx] ] == 'Date'):
-#                    print 'feat111:', feat
                     if(feat == '' or len(feat)!=4):
                         if(self.dataHandler.featidx2name[idx]+ '_EMPTY' in self.featVocabs):
                             ofeatures[ self.featVocabs[self.dataHandler.featidx2name[idx] + '_EMPTY'] ] += 1
                     elif( self.dataHandler.featidx2name[idx] in  self.featVocabs):
-#                         print 'feat222:', feat
-#                         print 'self.dataHandler.featidx2name[idx] ' + str(self.dataHandler.featidx2name[idx])
-#                         print 'idx', idx
-#                         print 'featVocabs', len(self.featVocabs)
-#                         print 'ofeatures', len(ofeatures)
-#                         print 'self.dataHandler.featidx2name', len(self.dataHandler.featidx2name)
                         yy = float(feat[:2])
                         mm = float(feat[2:]) / 12.0
-#                         print 'yy', yy
-#                         print 'mm', mm
-#                         print 'self.featVocabs[self.dataHandler.featidx2name[idx]]', self.featVocabs[self.dataHandler.featidx2name[idx]]
                         ofeatures[ self.featVocabs[self.dataHandler.featidx2name[idx]] ] += yy + mm
 
                 elif(self.mapOriFeatureType[ self.dataHandler.featidx2name[idx] ] == 'Char'):
