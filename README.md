@@ -32,16 +32,11 @@ original_validation_file:               cup98VAL.txt
 <br>
 feature_type_list_file :                It is manually transfered from feature_types.txt (uploaded named as feature_list.txt) 
 <br>
-For example: 	                        ODATEDW  Date = manually change Char to Date
-                                        OSOURCE     Char
-                                        TCODE       Num
-                                        .....
+output_feature_vocab_list_file:    	the list of generated features as well as their indices. 
 <br>
-output_feature_vocab_list_file    	the list of generated features as well as their indices. 
+output_train_feature_file:		the output feature files for training set. 
 <br>
-output_train_feature_file		the output feature files for training set. 
-<br>
-output_validation_feature_file	the output feature files for validation set.
+output_validation_feature_file:	the output feature files for validation set.
 
 
 2) Normalization
