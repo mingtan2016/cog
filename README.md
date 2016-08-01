@@ -30,7 +30,7 @@ original_train_file:                    cup98LRN.txt
 <br>
 original_validation_file:               cup98VAL.txt
 <br>
-feature_type_list_file :                It is manually transfered from feature_types.txt. 
+feature_type_list_file :                It is manually transfered from feature_types.txt (uploaded named as feature_list.txt) 
 <br>
 For example: 	                        ODATEDW  Date = manually change Char to Date
                                         OSOURCE     Char
