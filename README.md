@@ -6,6 +6,8 @@ Generally, I build two models to solve this prediction problem. One is binary cl
 For the binary classification step, all training examples are used. For the prediction step, only the examples with responses are used for training. 
 
 
+val.submission.results is the final PREDICT_D output of the validation set. 
+
 The code is built on PYTHON, using the Scikit-Learn package. The classifier is based on Linear SVM classifier, and the regressor is based on Linear SVM regressor. 
 
 There are following steps to complete the training and testing. 
