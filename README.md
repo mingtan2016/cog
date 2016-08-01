@@ -17,26 +17,19 @@ Since there are many categorical variables, I used one-hot vectors to represent 
 There is only one single feature for numerical valuables.
 
 There are several special cases. 
-a) ZIP: Although ZIP is a categorical variable, there are too many different values. Considering reducing the memory usage, I did not use this variable. 
-b) MDMAUD: four bytes respectively have their own meanings. So for each byte, I regard it as independent categorical variable. 
-c) DOMAIN: two bytes respectively have their own meanings. So for each byte, I regard it as independent categorical
-variable.
-d) All DATE vaiables: The last two digit 'mm' is month, the final value is yy + mm/12
+a) ZIP: Although ZIP is a categorical variable, there are too many different values. Considering reducing the memory usage, I did not use this variable. b) MDMAUD: four bytes respectively have their own meanings. So for each byte, I regard it as independent categorical variable. c) DOMAIN: two bytes respectively have their own meanings. So for each byte, I regard it as independent categorical variable. d) All DATE vaiables: The last two digit 'mm' is month, the final value is yy + mm/12
 
 The command is:
 
 python FeatureProcessor.py  original_train_file original_validation_file, feature_type_list_file, output_feature_vocab_list_file, output_train_feature_file, output_validation_feature_file
 
-original_train_file:			cup98LRN.txt
-original_validation_file:		cup98VAL.txt
-feature_type_list_file :		It is manually transfered from feature_types.txt. 
-					For example: 	ODATEDW     Date = manually change Char to Date
-							OSOURCE     Char
-							TCODE       Num
-							STATE       Char
-							ZIP         Char
-							MAILCODE    Char
-							......
+original_train_file:                    cup98LRN.txt
+original_validation_file:               cup98VAL.txt
+feature_type_list_file :                It is manually transfered from feature_types.txt. 
+For example: 	                        ODATEDW  Date = manually change Char to Date
+                                        OSOURCE     Char
+                                        TCODE       Num
+                                        .....
 output_feature_vocab_list_file    	the list of generated features as well as their indices. 
 output_train_feature_file		the output feature files for training set. 
 output_validation_feature_file	the output feature files for validation set.
